@@ -2,6 +2,6 @@ name : cicd1
 on : push
 jobs:
   job1:
-    runs-on : ubantu_linux
+    runs-on : ubuntu-latest
     steps :
       - run: echo "hello"
