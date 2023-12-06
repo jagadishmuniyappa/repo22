@@ -1,0 +1,7 @@
+name : cicd1
+on : push
+jobs:
+  job1:
+    runs_on : ubantu_linux
+    steps :
+      - run: echo "hello"
