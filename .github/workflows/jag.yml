@@ -3,7 +3,7 @@ on:
   workflow_dispatch:   
 jobs:
   Build-job:
-   runs-on: ubuntu-latest
+   runs-on: jag-devops
    steps:
      - name : task1 to print OS detsils
        run: uname -a
@@ -12,7 +12,10 @@ jobs:
      - name : step 3
        run : sleep 30
      - name : End job1  
-       run : echo "Build job completed"
+       run : |
+         touch /tmp/jagfile1
+         echo "Build job completed"
+         
   Test-job:
     runs-on: ubuntu-latest
     steps:
