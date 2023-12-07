@@ -1,0 +1,15 @@
+name: first_workflow
+on: 
+  push:
+    branches:
+     - main
+     - dev 
+jobs:
+  job1:
+   runs-on: ubuntu-latest
+   steps:
+     - name : task1 to print OS detsils
+       run: uname -a
+     - name : task2 to print hostname
+       run: hostname
+  
