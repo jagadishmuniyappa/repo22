@@ -13,14 +13,14 @@ jobs:
        run : sleep 30
      - name : End job1  
        run : echo "Build job completed"
-   Test-job:
+  Test-job:
     runs-on: ubuntu-latest
-     steps:
-     - name : task1 to print OS detsils
-       run: uname -a
-     - name : task2 to print hostname
-       run: hostname
-     - name : step 3
-       run : sleep 30
-     - name : End job1  
-       run : echo "Test job completed" 
+    steps:
+      - name : task1 to print OS detsils
+        run: uname -a
+      - name : task2 to print hostname
+        run: hostname
+      - name : step 3
+        run : sleep 30
+      - name : End job1  
+        run : echo "Test job completed" 
