@@ -6,6 +6,8 @@ on:
   pull_request: 
     branches:
       - main
+env:
+  USER1: jagadish
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,6 +18,7 @@ jobs:
         run: |
          ls -l
          echo "github repo name is : ${{GITHUB.REPOSITORY}} and user is ${{GITHUB.ACTOR}}"
+         echo "value for USER is : $USER1"
          pwd
     
     
