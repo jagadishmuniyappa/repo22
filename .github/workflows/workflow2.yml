@@ -36,5 +36,6 @@ jobs:
           ls -l
           echo "github repo name is : ${{GITHUB.REPOSITORY}} and user is ${{GITHUB.ACTOR}}"
           echo "value for USER is : $USER1 , $USER2 , $USER3"
+          echo "Value for user1 and servername are ${{VARS.USER1}} ${{VARS.server_name}}"
           pwd    
     
