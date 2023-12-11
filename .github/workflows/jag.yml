@@ -15,6 +15,7 @@ jobs:
        run : |
          touch /tmp/jagfile1
          echo "Build job completed"
+         echo "Value for user1 and servername are ${{VARS.USER1}} ${{VARS.server_name}}"
          
   Test-job:
     runs-on: ubuntu-latest
