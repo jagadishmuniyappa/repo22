@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+         git clone https://github.com/admingagan/Maven-Project.git
+         cd Maven-project
          ls -l
          pwd
     
