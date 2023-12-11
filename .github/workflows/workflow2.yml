@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.1.1 
       - name: step 2  
-      - run: |
+        run: |
          ls -l
          pwd
     
