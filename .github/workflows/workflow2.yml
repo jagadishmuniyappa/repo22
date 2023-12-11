@@ -25,7 +25,8 @@ jobs:
          echo "value for USER is : $USER1 , $USER2 , $USER3"
          pwd
          javaa -version
-      -  run: echo "print valur of user 3 $USER3" 
+      -  run: 
+           echo "print valur of user 3 $USER3" 
   test:
     runs-on: ubuntu-latest
     steps:
