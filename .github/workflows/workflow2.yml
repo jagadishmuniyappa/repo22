@@ -10,15 +10,19 @@ env:
   USER1: jagadish
 jobs:
   build:
+    env:
+      USER2: JAG
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.1 
-      - name: step 2  
+      - name: step 2 
+        env:
+          USER3: MUN
         run: |
          ls -l
          echo "github repo name is : ${{GITHUB.REPOSITORY}} and user is ${{GITHUB.ACTOR}}"
-         echo "value for USER is : $USER1"
+         echo "value for USER is : $USER1 , $USER2 , $USER3"
          pwd
     
     
