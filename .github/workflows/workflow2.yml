@@ -24,7 +24,7 @@ jobs:
          echo "github repo name is : ${{GITHUB.REPOSITORY}} and user is ${{GITHUB.ACTOR}}"
          echo "value for USER is : $USER1 , $USER2 , $USER3"
          pwd
-         javaa -version
+         java -version
   test:
     runs-on: ubuntu-latest
     steps:
