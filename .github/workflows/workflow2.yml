@@ -12,11 +12,12 @@ jobs:
   build:
     environment: dev
     runs-on: jag-devops
-    if: runner.os != 'ubuntu'
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.1 
       - name: step 2 
+        if: runner.os != 'ubuntu'
         env:
           USER3: MUN
         run: |
@@ -32,11 +33,12 @@ jobs:
   test:
     environment: prod
     runs-on: jag-devops
-    if: runner.os == 'ubuntu'
+    
     steps:
        - name: Checkout
          uses: actions/checkout@v4.1.1 
        - name: step 2 
+         if: runner.os == 'ubuntu'
          run: |
           ls -l
           echo "github repo name is : ${{GITHUB.REPOSITORY}} and user is ${{GITHUB.ACTOR}}"
