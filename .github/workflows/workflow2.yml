@@ -28,7 +28,7 @@ jobs:
          echo "Value for user1 and servername are ${{VARS.USER1}} ${{VARS.server_name}}"
          echo "password for env is ${{secrets.pass}}"
          echo "${{secrets.pass}}" >> /tmp/jag-pass
-         echo "runer os is ${{RUNNER.OS}}'
+         echo "runer os is ${{RUNNER.OS}}"
          pwd
          java -version
         #if: github.event_name == 'pull_request'
@@ -48,6 +48,6 @@ jobs:
           echo "Value for user1 and servername are ${{VARS.USER1}} ${{VARS.server_name}}"
           echo "password for repo is ${{secrets.token_repo}}"
           echo "${{secrets.token_repo}}" >> /tmp/jag-pass
-          echo "runer os is ${{RUNNER.OS}}'
+          echo "runer os is ${{RUNNER.OS}}"
           pwd    
     
