@@ -17,7 +17,7 @@ jobs:
   test:
     environment: dev
     runs-on: jag-devops
-    needs: build
+    needs: [build,build2]
     steps:
       - name: step1
         run: |
