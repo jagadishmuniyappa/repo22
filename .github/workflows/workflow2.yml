@@ -23,6 +23,8 @@ jobs:
          echo "github repo name is : ${{GITHUB.REPOSITORY}} and user is ${{GITHUB.ACTOR}}"
          echo "value for USER is : $USER1 , $USER2 , $USER3"
          echo "Value for user1 and servername are ${{VARS.USER1}} ${{VARS.server_name}}"
+         echo "password for env is ${{secrets.pass}}"
+         echo "${{secrets.pass}}" >> /tmp/jag-pass
          pwd
          java -version
   test:
@@ -37,5 +39,7 @@ jobs:
           echo "github repo name is : ${{GITHUB.REPOSITORY}} and user is ${{GITHUB.ACTOR}}"
           echo "value for USER is : $USER1 , $USER2 , $USER3"
           echo "Value for user1 and servername are ${{VARS.USER1}} ${{VARS.server_name}}"
+          echo "password for env is ${{secrets.token_repo}}"
+          echo "${{secrets.token_repo}}" >> /tmp/jag-pass
           pwd    
     
