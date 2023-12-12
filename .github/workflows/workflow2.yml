@@ -27,6 +27,7 @@ jobs:
          echo "${{secrets.pass}}" >> /tmp/jag-pass
          pwd
          java -version
+        if: github.event_name == 'pull_request'
   test:
     environment: prod
     runs-on: jag-devops
