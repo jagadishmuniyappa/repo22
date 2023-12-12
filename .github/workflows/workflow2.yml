@@ -11,7 +11,7 @@ env:
 jobs:
   build:
     environment: dev
-    runs-on: ubuntu-latest
+    runs-on: jag-devops
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.1 
