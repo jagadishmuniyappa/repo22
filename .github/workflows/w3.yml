@@ -11,7 +11,7 @@ jobs:
     
     steps:
       - name: step1
-        continue-on-error: true
+        #continue-on-error: true
         run: |
          cho "test ste1"
          sleep 10
