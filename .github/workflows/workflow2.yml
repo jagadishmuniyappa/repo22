@@ -12,6 +12,7 @@ jobs:
   build:
     environment: dev
     runs-on: jag-devops
+    if: runner.os != 'ubuntu'
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.1 
@@ -31,7 +32,7 @@ jobs:
   test:
     environment: prod
     runs-on: jag-devops
-    if: github.event_name == 'pull_request'
+    if: runner.os == 'ubuntu'
     steps:
        - name: Checkout
          uses: actions/checkout@v4.1.1 
