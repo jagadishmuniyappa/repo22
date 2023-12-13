@@ -13,7 +13,7 @@ jobs:
       - name: step1
         #continue-on-error: true
         run: |
-         cho "test ste1"
+         echo "test ste1"
          sleep 10
       - name: step2
         run: echo "running step 2"
