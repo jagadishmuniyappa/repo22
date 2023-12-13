@@ -11,7 +11,7 @@ env:
 jobs:
   build:
     environment: dev
-    runs-on: jag-devops
+    runs-on: ubuntu_latest
     
     steps:
       - name: Checkout
@@ -32,9 +32,9 @@ jobs:
          pwd
          java -version
         #if: github.event_name == 'pull_request'
-  test:
+  deploy:
     environment: prod
-    runs-on: jag-devops
+    runs-on: ubuntu_latest
     
     steps:
        - name: Checkout
