@@ -11,7 +11,7 @@ env:
 jobs:
   build:
     environment: dev
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     
     steps:
       - name: Checkout
@@ -34,7 +34,7 @@ jobs:
         #if: github.event_name == 'pull_request'
   deploy:
     environment: prod
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     
     steps:
        - name: Checkout
@@ -50,4 +50,21 @@ jobs:
           echo "${{secrets.token_repo}}" >> /tmp/jag-pass
           echo "runer os is ${{RUNNER.OS}}"
           pwd    
+  deploy_prod:
+    environment: production
+    runs-on: ubuntu-latest
     
+    steps:
+       - name: Checkout
+         uses: actions/checkout@v4.1.1 
+       - name: step 2 
+         if: runner.os == 'ubuntu'
+         run: |
+          ls -l
+          echo "github repo name is : ${{GITHUB.REPOSITORY}} and user is ${{GITHUB.ACTOR}}"
+          echo "value for USER is : $USER1 , $USER2 , $USER3"
+          echo "Value for user1 and servername are ${{VARS.USER1}} ${{VARS.server_name}}"
+          echo "password for repo is ${{secrets.token_repo}}"
+          echo "${{secrets.token_repo}}" >> /tmp/jag-pass
+          echo "runer os is ${{RUNNER.OS}}"
+          pwd    
