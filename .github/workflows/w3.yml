@@ -55,3 +55,13 @@ jobs:
         run: |
          echo "test ste1"
          sleep 10                
+  notification:
+    environment: dev
+    runs-on: jag-devops
+    needs: build
+    if: ${{ needs.build.result == 'failure' || failure() }}
+    steps:
+      - name: step1
+        run: |
+         echo "build failed"
+         
