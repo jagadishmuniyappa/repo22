@@ -1,0 +1,27 @@
+name: Test_env_Var
+on:
+  workflow_dispatch:
+    inputs:
+      deployTo:
+        type: choice
+        description: The environment you are deploying to
+        options:
+          - "f21prod"
+          - "f24prod"
+          - "f28prod"
+     parentChg:
+        description: Parent REL CHG
+        required: false
+        default: 'parent_chg_number'    
+  #############################################################
+  workflow_call:
+    inputs:
+      Environment:
+        required: true
+        type: string
+jobs:
+  build:
+    runs-on: ubuntu-latest 
+    environment: ${{ inputs.deployTo }}
+    run: |
+     echo ${{ inputs.deployTo }}
