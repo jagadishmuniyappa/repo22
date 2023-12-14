@@ -17,5 +17,5 @@ jobs:
     environment: ${{ inputs.deployTo }}
     steps:
       - name: Check environment access
-        run: echo inputs.deployTo
+        run: echo "${{ inputs.deployTo }}" 
     
