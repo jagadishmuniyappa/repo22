@@ -19,5 +19,5 @@ jobs:
       - name: Check environment access
         run: |
           echo "${{ inputs.deployTo }}" 
-          echo "${{ var.SERVER_NAME  }}" 
+          echo "${{ VARS.server_name  }}" 
     
