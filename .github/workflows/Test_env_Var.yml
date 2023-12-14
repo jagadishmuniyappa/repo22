@@ -6,9 +6,9 @@ on:
         type: choice
         description: The environment you are deploying to
         options:
-          - "f21prod"
-          - "f24prod"
-          - "f28prod"
+          - "dev"
+          - "prod"
+
    
 
 jobs:
