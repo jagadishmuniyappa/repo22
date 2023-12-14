@@ -9,19 +9,13 @@ on:
           - "f21prod"
           - "f24prod"
           - "f28prod"
-     parentChg:
-        description: Parent REL CHG
-        required: false
-        default: 'parent_chg_number'    
-  #############################################################
-  workflow_call:
-    inputs:
-      Environment:
-        required: true
-        type: string
+   
+
 jobs:
   build:
     runs-on: ubuntu-latest 
     environment: ${{ inputs.deployTo }}
-    run: |
-     echo ${{ inputs.deployTo }}
+    steps:
+      - name: Check environment access
+        run: echo ${{ inputs.deployTo }}" 
+    
