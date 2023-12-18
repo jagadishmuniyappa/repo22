@@ -1,4 +1,4 @@
-name: CI demo
+name: CI dem
 on:
   push:
     branches: [ "main" ]
